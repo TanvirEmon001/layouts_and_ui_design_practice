@@ -6,10 +6,6 @@ class TravelDestinationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Travel Card'),
-        backgroundColor: Colors.teal,
-      ),
       body: Padding(
           padding: EdgeInsets.all(15),
         child: Center(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:layout_ui/bottom_nav_app.dart';
 import 'package:layout_ui/food_app_home_page.dart';
 
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const FoodAppHomePage(),
+      home: const BottomNavApp(),
     );
   }
 }

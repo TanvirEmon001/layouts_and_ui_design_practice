@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'food_detail_screen.dart';
+
 class FoodCardList extends StatefulWidget {
   const FoodCardList({super.key});
 
@@ -13,16 +15,22 @@ class _FoodCardListState extends State<FoodCardList> {
     {"foodName" : "Delicious Sandwich", "foodDetails" : "Juicy beef patty, fresh lettuce, tomato, and cheese!", "price" : "\$8.99", "foodImage" : "https://images.unsplash.com/photo-1744970531074-4a130cd21cfc"},
     {"foodName" : "Yammy Cake", "foodDetails" : "Juicy beef patty, fresh lettuce, tomato, and cheese!", "price" : "\$15.99", "foodImage" : "https://plus.unsplash.com/premium_photo-1741194732460-bb17c8e8e62f"},
     {"foodName" : "Milky Drinks", "foodDetails" : "Juicy beef patty, fresh lettuce, tomato, and cheese!", "price" : "\$50", "foodImage" : "https://images.unsplash.com/photo-1743445976751-2883283dd2fc"},
+    {"foodName" : "Milky Drinks", "foodDetails" : "Juicy beef patty, fresh lettuce, tomato, and cheese!", "price" : "\$50", "foodImage" : "https://images.unsplash.com/photo-1743445976751-2883283dd2fc"},
+    {"foodName" : "Milky Drinks", "foodDetails" : "Juicy beef patty, fresh lettuce, tomato, and cheese!", "price" : "\$50", "foodImage" : "https://images.unsplash.com/photo-1743445976751-2883283dd2fc"},
+    {"foodName" : "Milky Drinks", "foodDetails" : "Juicy beef patty, fresh lettuce, tomato, and cheese!", "price" : "\$50", "foodImage" : "https://images.unsplash.com/photo-1743445976751-2883283dd2fc"},
+    {"foodName" : "Milky Drinks", "foodDetails" : "Juicy beef patty, fresh lettuce, tomato, and cheese!", "price" : "\$50", "foodImage" : "https://images.unsplash.com/photo-1743445976751-2883283dd2fc"},
+    {"foodName" : "Milky Drinks", "foodDetails" : "Juicy beef patty, fresh lettuce, tomato, and cheese!", "price" : "\$50", "foodImage" : "https://images.unsplash.com/photo-1743445976751-2883283dd2fc"},
+    {"foodName" : "Milky Drinks", "foodDetails" : "Juicy beef patty, fresh lettuce, tomato, and cheese!", "price" : "\$50", "foodImage" : "https://images.unsplash.com/photo-1743445976751-2883283dd2fc"},
+    {"foodName" : "Milky Drinks", "foodDetails" : "Juicy beef patty, fresh lettuce, tomato, and cheese!", "price" : "\$50", "foodImage" : "https://images.unsplash.com/photo-1743445976751-2883283dd2fc"},
+    {"foodName" : "Milky Drinks", "foodDetails" : "Juicy beef patty, fresh lettuce, tomato, and cheese!", "price" : "\$50", "foodImage" : "https://images.unsplash.com/photo-1743445976751-2883283dd2fc"},
+    {"foodName" : "Milky Drinks", "foodDetails" : "Juicy beef patty, fresh lettuce, tomato, and cheese!", "price" : "\$50", "foodImage" : "https://images.unsplash.com/photo-1743445976751-2883283dd2fc"},
+    {"foodName" : "Milky Drinks", "foodDetails" : "Juicy beef patty, fresh lettuce, tomato, and cheese!", "price" : "\$50", "foodImage" : "https://images.unsplash.com/photo-1743445976751-2883283dd2fc"},
   ];
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Food Delivery Card'),
-        backgroundColor: Colors.orange,
-      ),
       body: ListView.builder(
           itemCount: foodList.length,
           itemBuilder: (context,index)
@@ -78,7 +86,14 @@ class _FoodCardListState extends State<FoodCardList> {
                                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.orange),
                               ),
                               ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (_) => FoodDetailScreen(food: foodList[index]),
+                                    ),
+                                  );
+                                },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.orange,
                                   shape: RoundedRectangleBorder(
